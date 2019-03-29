@@ -14,16 +14,18 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * инициализации.
  */
 public class RandomInitializer implements Initializer {
+    int min, max; //диапазон массива    
+    
+    public RandomInitializer(int min, int max){
+        this.min = min;
+        this.max = max;
+    }
 
-    /**
-     * Выполняет инициализацию массива, значениями
-     * последовательности случайных чисел.
-     *
-     * @param array массив, подлежащий инициализации
-     */
+@Override
     public void initialize(int[] array) {
-        /*
-         * TODO(Студент): Реализовать метод initialize класса RandomInitializer
-         */
+        
+        for(int x = 0; x < array.length; x++){
+            array[x] = (int) (Math.random()*(max - min) +1) + min;//генерация чисел [-50;50]
+            }
     }
 }
