@@ -14,7 +14,7 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * инициализации.
  */
 public class RandomInitializer implements Initializer {
-    int min, max; //диапазон массива    
+    private int min, max; //диапазон массива    
     
     public RandomInitializer(int min, int max){
         this.min = min;
